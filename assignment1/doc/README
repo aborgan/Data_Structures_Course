@@ -1,0 +1,58 @@
+**************************************
+Andrew Borgan                  0945189
+CIS*2520*0104             Assignment 1
+Monday, September 26th, 2016          
+**************************************
+
+***********
+COMPILATION
+***********
+
+The program is compiled from assignment1/src folder using the following command:
+
+make
+
+*****
+USAGE
+*****
+
+The program is run from the assignment1/src folder using the following command:
+
+To run carbon.c:
+./A1 1
+
+To run ackermann.c:
+./A1 2
+
+To run newton.c:
+./A1 3
+
+
+*******
+TESTING
+*******
+
+carbon.c:  To test the carbon.c file, the number of outputted lines was given.  Writing every possible permutation of the letters 'c' 'a' 'r' 'b' 'o' 'n'
+can be given by 6P6 = (6!)/(6-6!) = 720.  Since the output generates 720 combinations of the letters, and the last permutation is carbon backwards, I feel
+confident that the output of carbon.c is correct.
+
+ackermann.c:  To test the output of the ackermann function, I first found the max value for a signed int that can be outputted without causig an overflow
+(see assignment1/assets/test.c).  The max value I found was 2147483647.  Any larger than this would yield an overflow in the buffer.
+I then considered the sequences of values given when m is held constant:
+
+When m = 0:  A(0,n) has n max n of 2147483646
+
+When m = 1:  A(1,n) has a max n of approximately 261910 (The seocs server seems to seg fault sometimes at this value and other times not).
+
+When m = 2:  A(2,n) has a max n of approx 130960 (the socs server seems to seg fault sometimes at this value and other times not).
+
+When m = 3:  A(3,n) has a max n of 14
+
+When m = 4:  A(4,n) has max n of 2.
+
+Any value of m > 5 yields output too large for the int.
+
+newton.c:  The newton outputs seem to be correct for both the recursive method and the non recursive method.  The recursive method seems to be slower than the
+non recursive method in this case and seems to take on average approximately 1.36-1.4 times as long as the non-recursive method to compute.  There can be an
+error generated if the epsilon value is too small for the double type to calculate with precision.
+

@@ -1,0 +1,48 @@
+**************************
+Andrew Borgan      0945189
+CIS*2520*0104
+Monday, October 17th, 2016
+**************************
+
+***********
+COMPILATION
+***********
+
+The programs are compiled from the A2 folder using the following command:
+
+make
+
+*****
+USAGE
+*****
+
+To run the carLists program, use the following command:
+
+./carLists
+
+To run the postScript program, use the following command:
+
+./postScript
+
+*******
+TESTING
+*******
+
+carLists:
+
+	The program will load the file called "list" in the assets folder when opened and will function using that file.
+	The program only reads a specific type of formatting for the list file, so if it gets deleted accidently, don't
+	try to make a new one, just run the program without a list and the program will make one with the proper format
+	when you exit the program.  Trying to make a list with a different format will result in a seg fault. Total income
+	is calculated only for each given instance of running the program and is not saved (although it could be easily).
+
+postScrip:
+
+	The program will check for invalid postscript notation as it runs and will exit the program and print an error
+	message if it encounters invalid notation.  Here are some values to test:
+
+		12+ is 3.00
+		34- is -1.00
+		12+34-* is -3.00
+		10/ generates an error
+		12345++++ is 15.00

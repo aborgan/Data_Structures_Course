@@ -1,0 +1,52 @@
+**************************
+Andrew Borgan      0945189
+CIS*2520*0104
+
+Assignment 3
+Monday, November 7th, 2016
+**************************
+
+***********
+COMPILATION
+***********
+
+The assignment is compiled from the A3 folder using the following command:
+
+make
+
+*****
+USAGE
+*****
+
+The arithmetic tree is run using the following command:
+
+./treeMain "(math goes here)"
+
+the heap is run using the following command:
+
+./heapMain
+
+
+*******
+TESTING
+*******
+
+Arithmetic Tree:
+
+The following are some inputs that should function properly:
+
+    ./treeMain "(1+2)"
+    ./treeMain "(((x1+5.12)*(x2-7.68))/x3)"
+    ./treeMain "(((1.00+2.00)+3.00)+3.00)"
+
+The tree can take in numbers other than floats too (maximum of 4 characters per number though) but it may break the display function.  The program could be
+extended to allow the display to accomodate for the issue though.  The tree should catch divide by 0 errors as they occur.  The function also does some basic
+catching for invalid input at the command line, although if you try hard enough you can probably get around it.  If you give the program incorrect input
+it won't work as inteded.
+
+Heap:
+
+Heap should work properly as long as f.dat is filled with integers delimited by single spaces.  It will look nicest if all ints are the same lenght.  There is a
+sample f.dat file in the assets folder.  Note that the program is set up to look specifically for the f.dat file in the assets folder.  If you want it to look
+somewhere else, the only way to do that is to change the code.  You could as the user for a path and look there, but since the assignment said specifically to
+look for a file name "f.dat" I did that.

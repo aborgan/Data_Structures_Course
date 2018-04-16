@@ -1,0 +1,40 @@
+***************************
+Andrew Borgan       0945189
+CIS2520        Assignment 4
+
+
+Monday, November 28th, 2016
+***************************
+
+***********
+COMPILATION
+***********
+
+the file is comiled from the A4 folder using the following command:
+
+    make
+
+
+*****
+USAGE
+*****
+
+The program is run from the A4 folder using the following command:
+
+    ./avlTree
+
+
+
+*******
+TESTING
+*******
+
+The program was tested using the two files in the assets folder.
+The proram should work properly for those two files as well as any other files you were to load in.
+
+Inserting nodes manually also workds, as well as removing nodes.
+If you load in multiple files it should also work properly.
+
+Some of the code for the removal function could probably be rewritten to be more elegant than the way I've done it
+although for the sake of this assignment the code seems to work pretty well.  Many of the functions are reusable as
+long as you want to implement an avlTree that uses a frequency counter instead of adding repeated nodes to the tree.
